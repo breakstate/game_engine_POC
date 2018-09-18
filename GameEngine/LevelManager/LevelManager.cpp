@@ -1,7 +1,8 @@
 #include "LevelManager.hpp"
+#include <iostream>
 
 LevelManager::LevelManager( int level ){
-	this->level = level;
+	//this->level = level;
 	this->mapWidth = 9;
 	this->mapHeight = 9;
 }
@@ -20,17 +21,22 @@ void	LevelManager::generateMap( void ){
 	// abundance of enemies and breakable bricks depends on level
 	// (total vector elements / y) + x
 	// totalBlocks = x*y
-	for (int i = 1; i <= 81; i++){
-		if (((i%9 == 1) || (i%9 == 0)) || ((i <= 9) || (i >= 81 - 9)))
+	for (int i = 0; i <= 81; i++){
+		if (((i%9 == 1) || (i%9 == 0)) || ((i <= 9) || (i >= 81 - 9))){
+			std::cout << i << " and 1" << std::endl; // debug
 			this->testMap.push_back(1);
-		
+		}
+		else{
+			std::cout << i << " and 0" << std::endl; // debug
+			this->testMap.push_back(0);
+		}
 	}
 }
 
 void	LevelManager::debugPrintMap( void ){ // debug // test
 	for (int i = 1; i <= testMap.size(); i++){
-		std::cout << testMap[i] << std::endl;
-		if (!(i % 9 ))
+		std::cout << testMap[i];
+		if (i % 9 == 0)
 			std::cout << std::endl;
 	}
 }

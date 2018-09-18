@@ -1,0 +1,1 @@
+clang++ -o engineTest GameEngine/LevelManager/LevelManager.cpp main.cpp -I GameEngine/LevelManager/ -std=c++11

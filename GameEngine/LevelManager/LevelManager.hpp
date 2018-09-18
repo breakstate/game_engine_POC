@@ -19,10 +19,10 @@ public:
 	void	placeDoor( void );
 	void	debugPrintMap( void ); // debug // test
 
-	static int			level;
+	//static int			level;
 	int					mapWidth;
 	int					mapHeight;
-	std::vector<int>	testMap;
+	std::vector<int>	testMap; // map = vector of game objects // breakable walls can "contain" other objects // can have predetermined or drop based on rng
 
 protected:
 
