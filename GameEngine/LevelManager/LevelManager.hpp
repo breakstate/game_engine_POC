@@ -31,30 +31,3 @@ private:
 };
 
 #endif
-/*
-void	LevelManager::generateMap( void ){
-	// using 1d vector
-	// fixed map size
-	// abundance of enemies and breakable bricks depends on level
-	// (total vector elements / y) + x
-	// totalBlocks = x*y
-	int block = 0;
-	for (int i = 0; i <= this->mapWidth * this->mapHeight; i++){
-		if (((i%9 == 1) || (i%9 == 0)) || ((i <= 9) || (i >= 81 - 9))){
-			std::cout << i << " a1d 1" << std::endl; // debug
-			this->testMap.push_back(1);
-		}
-		else //if ((i > (this->mapWidth * 2)) && (i < (this->mapWidth * this->mapHeight - this->mapWidth * 2))){
-			//	block++;
-			//	std::cout << i << " a2d " << block << std::endl; // debug
-			//if (block % 2 == 0){
-			//	std::cout << i << " a3d 1" << std::endl; // debug
-			//	this->testMap.push_back(1);
-			//}
-			//else{
-				std::cout << i << " a4d 0" << std::endl; // debug
-				this->testMap.push_back(0);
-		//	}
-	//	}
-	}
-}*/
