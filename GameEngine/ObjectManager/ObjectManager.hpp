@@ -1,13 +1,13 @@
-#ifndef ENTITYMANAGER_HPP
-# define ENTITYMANAGER_HPP
+#ifndef OBJECTMANAGER_HPP
+# define OBJECTMANAGER_HPP
 
-# include "EntityManager.hpp"
+# include "ObjectManager.hpp"
 # include "GameObject.hpp"
 
-class EntityManager {
+class ObjectManager {
 public:
-	EntityManager( void ); // may need reference to playstate
-	~EntityManager( void );
+	ObjectManager( void ); // may need reference to playstate
+	~ObjectManager( void );
 
 	void	update(eControl key, double deltaTime);
 	void	canMove(GameObject *GameObject, eControl key); // returns direction // or void and calls move directly

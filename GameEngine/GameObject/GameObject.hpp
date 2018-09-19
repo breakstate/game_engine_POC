@@ -5,6 +5,7 @@
 # include <vector>
 
 # include "enumGameObjectState.hpp"
+# include "Vector3d.hpp"
 
 class GameObject {
 public:
@@ -15,8 +16,10 @@ public:
 	//addComponent
 	//getComponent
 
+	// model
+	// sprite
 	ObjectManager			*OM;
-	vector3d				position;
+	Vector3d				position;
 	float					velocity;
 	std::string				type;
 	int						id;
