@@ -5,30 +5,29 @@
 # include <vector>
 
 # include "enumGameObjectState.hpp"
+# include "enumGameObjectType.hpp"
 # include "Vector3d.hpp"
-# include "Component.hpp"
-# include "Powerup.hpp"
 
 class GameObject {
 public:
-	GameObject( std::string type, Powerup *powerup );
+	GameObject( eGameObjectType type, Vector3d position );
 	GameObject( void );
 	~GameObject( void );
 
 	//addComponent
 	//getComponent
 
-	// model
-	// sprite
-	//ObjectManager			*OM;
+	std::string				modelPath;
+	std::string				spritePath;
 	Vector3d				position;
 	float					velocity;
-	std::string				type;
-	int						id;
-	std::vector<*Component>	components;
 	eGameObjectState		state;
+	eGameObjectType			eType;
+	std::string				strType;
+	float					currentDirection;
+	int						hitPoints;
+	bool					mortal;
 	//Powerup					*powerup; // think about how bombs are ordered when powerup is active
-	//type				currentDirection;
 
 protected:
 

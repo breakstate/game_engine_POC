@@ -3,6 +3,7 @@
 
 # include <vector>
 # include <iostream>
+# include <cassert>
 
 # include "LevelManager.hpp"
 //# include "GameObject.hpp"
