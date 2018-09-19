@@ -6,10 +6,12 @@
 
 # include "enumGameObjectState.hpp"
 # include "Vector3d.hpp"
+# include "Component.hpp"
+# include "Powerup.hpp"
 
 class GameObject {
 public:
-	GameObject( ObjectManager & OM, std::string type );
+	GameObject( std::string type, Powerup *powerup );
 	GameObject( void );
 	~GameObject( void );
 
@@ -18,14 +20,14 @@ public:
 
 	// model
 	// sprite
-	ObjectManager			*OM;
+	//ObjectManager			*OM;
 	Vector3d				position;
 	float					velocity;
 	std::string				type;
 	int						id;
-	std::vector<Component>	components;
+	std::vector<*Component>	components;
 	eGameObjectState		state;
-	Powerup					*powerup; // think about how bombs are ordered when powerup is active
+	//Powerup					*powerup; // think about how bombs are ordered when powerup is active
 	//type				currentDirection;
 
 protected:

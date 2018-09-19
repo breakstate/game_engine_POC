@@ -2,12 +2,13 @@
 # define COMPONENT_HPP
 
 # include <string>
+# include <iostream>
 
 # include "GameObject.hpp"
 
 class Component {
 public:
-	Component( GameObject *parent );
+	Component( GameObject *parent, std::string type );
 	Component( void );
 	~Component( void );
 	void run( void ); // input param?

@@ -1,6 +1,6 @@
 #include "GameObject.hpp"
 
-GameObject::GameObject( ObjectManager & OM, std::string type, Powerup & powerup ){
+GameObject::GameObject( std::string type, Powerup & powerup ){
 	this->type = type;
 	this->OM = OM;
 	this->powerup = powerup; // can be NULL;
